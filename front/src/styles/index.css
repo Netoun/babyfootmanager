@@ -1,0 +1,36 @@
+body {
+  background: url("../assets/background.png") no-repeat center center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.dashboard {
+  background: white;
+  border-radius: 2px;
+}
+
+.delete {
+  margin-top: 4px;
+  opacity: 1;
+}
+
+.isfinish {
+  opacity: 0.4;
+}
+
+.isfinish:hover {
+  background: rgb(179, 179, 179) !important;
+}
+
+.chat {
+  position: relative;
+}
+
+.input-pseudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}

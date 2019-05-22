@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> <%= htmlWebpackPlugin.options.title %> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="card dashboard">
+        <header class="card-header">
+          <p class="card-header-title">
+            <span class="icon">
+              <i class="fas fa-futbol"></i>
+            </span>
+            BabyFoot Manager
+          </p>
+
+        </header>
+        <div class="card-content">
+          <div class="columns">
+            <div class="column gestion">
+              <div class="columns">
+                <div class="column is-three-fifths">
+                  <p class="control has-icons-left">
+                    <input maxlength="25" id="inputgame" class="input" type="text" placeholder="Nouvelle partie">
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-pen"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="column">
+                  <a id="buttongame" class="button is-link">Ajouter</a>
+                </div>
+                <div class="tags has-addons">
+                  <span class="tag is-medium">En cours </span>
+                  <span id="counter" class="tag is-info is-medium"></span>
+                </div>
+              </div>
+              <div class="content">
+                <table id="games" class="table is-hoverable ">
+                  <thead>
+                    <tr>
+                      <th>Match</th>
+                      <th><abbr title="Terminer une partie">Ter.</abbr></th>
+                      <th><abbr title="Supprimer une partie">Del.</abbr></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="columnchat" class="column chat">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
