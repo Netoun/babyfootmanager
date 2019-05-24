@@ -21,11 +21,7 @@ export const watchGames = socket => {
         handlerGames.getGames(gamesocket)
       })
     })
-    client.on('error', (err) => {
-      console.log(err)
-    })
-    client.on('disconnect', () => {
-      console.log('Client Games disconnected.')
-    })
+    client.on('error', (err) => {})
+    client.on('disconnect', () => {})
   })
 }

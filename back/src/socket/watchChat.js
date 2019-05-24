@@ -8,11 +8,7 @@ export const watchChat = socket => {
     client.on('send', (message) => {
       handlerChat.send(client, message)
     })
-    client.on('error', (err) => {
-      console.log(err)
-    })
-    client.on('disconnect', () => {
-      console.log('Client Chat disconnected.')
-    })
+    client.on('error', (err) => {})
+    client.on('disconnect', () => {})
   })
 }
