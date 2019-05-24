@@ -3,6 +3,12 @@ import Io from 'socket.io'
 import {
   config
 } from './utils/config'
+import {
+  watchGames
+} from './socket/watchGames'
+import {
+  watchChat
+} from './socket/watchChat'
 
 export default function start() {
   const server = express()
@@ -15,11 +21,10 @@ export default function start() {
     next()
   })
 
-  const io = server.listen(config.express.port, () => {
-    console.log(config.express.port)
-  })
+  const io = server.listen(config.express.port, () => {})
   const socket = Io(io)
-
+  watchChat(socket)
+  watchGames(socket)
 
   return server
 }
