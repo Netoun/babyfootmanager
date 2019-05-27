@@ -17,7 +17,8 @@ module.exports = merge(webpackBaseConfig, {
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-          SOCKET_URL: JSON.stringify(process.env.SOCKET_URL),
+          SOCKET_HOST: JSON.stringify(process.env.SOCKET_HOST),
+          SOCKET_PORT: JSON.stringify(process.env.SOCKET_PORT),
         },
       })
     ]
