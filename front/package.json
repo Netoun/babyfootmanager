@@ -1,0 +1,48 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build:prod": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "webpack-dev-server --mode development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@fortawesome/fontawesome-free": "^5.8.2",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
+    "bulma": "^0.7.2",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "dotenv": "^8.0.0",
+    "dotenv-webpack": "^1.7.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-reload-plugin": "^2.0.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.4",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "standard": {
+    "env": [
+      "node",
+      "es6"
+    ]
+  },
+  "dependencies": {
+    "common-env": "^6.3.0",
+    "socket.io-client": "^2.2.0"
+  }
+}

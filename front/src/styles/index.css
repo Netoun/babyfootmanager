@@ -1,0 +1,98 @@
+body {
+  background: url("../assets/background.png") no-repeat center center;
+  background-size: cover;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.dashboard {
+  background: white;
+  border-radius: 2px;
+}
+
+.delete {
+  margin-top: 4px;
+  opacity: 1;
+}
+
+.isfinish {
+  opacity: 0.4;
+}
+
+.isfinish:hover {
+  background: rgb(179, 179, 179) !important;
+}
+
+.chat {
+  position: relative;
+}
+
+.input-pseudo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.card-chat {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-blur {
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.content-message {
+  height: 55vh;
+  overflow: auto;
+}
+
+.input-message {
+  border: none !important;
+  border-color: white;
+  box-shadow: none !important;
+}
+
+.message {
+  width: 70%;
+  line-height: 1.2em;
+  font-size: 1em;
+  margin-bottom: 0.5rem !important;
+  border-radius: 20px !important;
+}
+
+.message-body {
+  padding: 0.5em !important;
+  border: none !important;
+}
+
+.you .message-body {
+  text-align: right;
+}
+
+.you {
+  margin-left: 30%;
+}
+
+.chat-header {
+  background: #276cda !important;
+}
+
+.chat-header .card-header-title {
+  color: white !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .section {
+    padding: 0 !important;
+  }
+
+  .card-chat {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
