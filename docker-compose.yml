@@ -1,7 +1,23 @@
 version: '3.3'
 
 services:
-  db:
+  baby-front:
+    build: ./front
+    restart: always
+    ports:
+      - '8080:80'
+    links:
+      - baby-back
+  baby-back:
+    build: ./back
+    restart: always
+    ports:
+      - '3000:3000'
+    env_file:
+      - ./back/.env
+    links:
+      - baby-db
+  baby-db:
     build: ./database
     restart: always
     ports:

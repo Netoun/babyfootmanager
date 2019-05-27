@@ -5,7 +5,7 @@ export const config = env().getOrElseAll({
     env: 'development'
   },
   express: {
-    port: 3001
+    port: 3000
   },
   postgres: {
     user: 'easilys',

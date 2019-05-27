@@ -1,12 +1,14 @@
 import env from 'common-env'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export const config = env().getOrElseAll({
   node: {
     env: 'development'
   },
   socket: {
-    url: 'http://localhost:3001',
-    chat: 'chat',
-    games: 'games',
+    host: 'http://localhost',
+    port: 3000
   }
 })

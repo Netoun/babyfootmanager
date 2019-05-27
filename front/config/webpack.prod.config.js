@@ -1,13 +1,25 @@
 const merge = require('webpack-merge')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const webpackBaseConfig = require('./webpack.common.config.js')
+
+require('dotenv').config()
+
+console.log(process.env.NODE_ENV)
+console.log(process.env.SOCKET_HOST)
 
 module.exports = merge(webpackBaseConfig, {
   optimization: {
     minimizer: [
-      new UglifyJsPlugin(),
-      new OptimizeCSSAssetsPlugin()
+      new TerserPlugin(),
+      new OptimizeCSSAssetsPlugin(),
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+          SOCKET_URL: JSON.stringify(process.env.SOCKET_URL),
+        },
+      })
     ]
   }
 })

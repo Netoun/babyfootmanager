@@ -12,22 +12,16 @@ export const template = {
   },
   rowChatThem: message => {
     return `<article class="message is-dark them">
-      <div class="message-header">
-        <p>   ${message.username}</p>
-      </div>
-      <div class="message-body">
-        ${message.text}
-      </div>
-    </article>`
+              <div class="message-body">
+                <strong>${message.username} : </strong>${message.text}
+              </div>
+            </article>`
   },
   rowChatYou: message => {
     return `<article class="message is-info you">
-      <div class="message-header">
-        <p>   ${message.username}</p>
-      </div>
-      <div class="message-body">
-        ${message.text}
-      </div>
-    </article>`
+              <div class="message-body">
+                ${message.text}
+              </div>
+            </article>`
   }
 }

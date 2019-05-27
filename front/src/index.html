@@ -25,7 +25,7 @@
           <div class="columns">
             <div class="column gestion">
               <div class="columns">
-                <div class="column is-three-fifths">
+                <div class="column is-6">
                   <p class="control has-icons-left">
                     <input maxlength="25" id="inputgame" class="input" type="text" placeholder="Nouvelle partie">
                     <span class="icon is-small is-left">
@@ -33,7 +33,7 @@
                     </span>
                   </p>
                 </div>
-                <div class="column">
+                <div class="column is-3">
                   <a id="buttongame" class="button is-link">Ajouter</a>
                 </div>
                 <div class="tags has-addons">
@@ -51,13 +51,37 @@
                     </tr>
                   </thead>
                   <tbody>
-
                   </tbody>
                 </table>
               </div>
             </div>
             <div id="columnchat" class="column chat">
-
+              <div id="box" class="box input-pseudo">
+                <label class="label ">Username</label>
+                <div class="control">
+                  <input id="username" class="input" type="text" placeholder="Text input">
+                </div>
+                <p class="help">Entrer votre pseudo</p>
+              </div>
+              <div id="card-chat" class="card card-chat card-blur">
+                <header class="card-header ">
+                  <p class="card-header-title">
+                    Easichat
+                  </p>
+                </header>
+                <div class="card-content">
+                  <div id="content-chat" class="content-message">
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <div class="control has-icons-left">
+                    <span class="icon is-right">
+                      <i class="fas fa-comment"></i>
+                    </span>
+                    <input id="input-message" class="input input-message" type="text" placeholder="Text input">
+                  </div>
+                </footer>
+              </div>
             </div>
           </div>
         </div>

@@ -2,21 +2,23 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackReloadPlugin = require('html-webpack-reload-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: '[name].[chunkhash].js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].[chunkhash].js'
   },
   resolve: {
     extensions: ['.js']
   },
+  node: {
+    fs: "empty"
+  },
   module: {
     rules: [{
-        test: [/.js$/],
+        test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
@@ -47,7 +49,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Babyfoot manager',
       template: './src/index.html',
@@ -58,13 +59,13 @@ module.exports = {
         collapseWhitespace: false
       }
     }),
-    new HtmlWebpackReloadPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'style.[chunkhash].css'
+    }),
     new CopyWebpackPlugin([{
       from: './src/assets',
       to: 'assets'
     }]),
-    new MiniCssExtractPlugin({
-      filename: 'style.[chunkhash].css'
-    }),
+    new CleanWebpackPlugin()
   ]
 }

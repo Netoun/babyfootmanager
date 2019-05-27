@@ -2,7 +2,7 @@ import {
   template
 } from './template.js'
 import {
-  addEventButtontByClassName
+  addEventButtonToRow
 } from './utils'
 
 const table = document.getElementById("games").getElementsByTagName('tbody')[0]
@@ -14,9 +14,9 @@ const countCurrentGame = (listGames) => {
 
 const addButtonsToRow = (socket, row) => {
   const finishButton = row.getElementsByClassName("finish")[0]
-  addEventButtontByClassName(finishButton, socket, row, gamesactions.finishGame)
+  addEventButtonToRow(finishButton, socket, row, gamesactions.finishGame)
   const deleteButton = row.getElementsByClassName("delete")[0]
-  addEventButtontByClassName(deleteButton, socket, row, gamesactions.deleteGame)
+  addEventButtonToRow(deleteButton, socket, row, gamesactions.deleteGame)
 }
 
 const addRow = (game, socket, table, index) => {
@@ -42,7 +42,7 @@ export const gamesactions = {
       addRow(game, socket, table, i)
     })
   },
-  addGame: socket => {
+  addGame: (event, socket) => {
     const newGame = document.getElementById("inputgame")
 
     newGame.classList.remove("is-danger")
