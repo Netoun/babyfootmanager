@@ -35,14 +35,14 @@ POSTGRES_HOST=baby-db
 POSTGRES_DATABASE=babyfootmanager
 POSTGRES_HOST_PASSWORD=recrutement
 POSTGRES_HOST_PORT=5432
-NODE_ENVIRONNEMENT=production
+NODE_ENV=production
 ```
 
 ./front/.env:
 ```
 SOCKET_HOST=http://locahost
 SOCKET_PORT=3000
-NODE_ENVIRONNEMENT=production
+NODE_ENV=production
 ```
 
 Then, run this command in root project:
@@ -51,7 +51,7 @@ Then, run this command in root project:
 docker-compose up -d
 ```
 
-## Installing 
+## Installing for developpement
 
 To install dependencies and start in develeppement mode
 
