@@ -40,7 +40,7 @@ NODE_ENV=production
 
 ./front/.env:
 ```
-SOCKET_HOST=http://locahost
+SOCKET_HOST=http://localhost
 SOCKET_PORT=3000
 NODE_ENV=production
 ```
