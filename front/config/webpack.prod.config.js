@@ -6,9 +6,6 @@ const webpackBaseConfig = require('./webpack.common.config.js')
 
 require('dotenv').config()
 
-console.log(process.env.NODE_ENV)
-console.log(process.env.SOCKET_HOST)
-
 module.exports = merge(webpackBaseConfig, {
   optimization: {
     minimizer: [
