@@ -85,6 +85,6 @@ export const config = env().getOrElseAll({
 * [Express](http://www.dropwizard.io/1.0.2/docs/) - Fast, unopinionated, minimalist web framework for Node.js
 * [Socket IO](https://socket.io/) - Featuring the fastest and mode reliable real-time engine
 * [Webpack 4](https://rometools.github.io/rome/) - Module bundler for javascript
-* [Bulma] https://bulma.io/) - CSS framework built whit sass
+* [Bulma](https://bulma.io/) - CSS framework built whit sass
 
 
